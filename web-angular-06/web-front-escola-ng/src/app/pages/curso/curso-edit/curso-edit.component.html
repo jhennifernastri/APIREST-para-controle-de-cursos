@@ -1,0 +1,33 @@
+<app-header></app-header>
+    <main>
+        <form class="pure-form pure-form-aligned" id="curso-form">
+            <fieldset class="dinamico">
+                <legend>Edição de Curso</legend>
+                <div class="pure-control-group">
+                    <label>Id:</label>
+                    <input type="text" id="id" value="{{Curso.Id}}" disabled>
+                </div>
+                <div class="pure-control-group">
+                    <label for="nomedocurso">Nome do Curso:</label>
+                    <input type="text" id="nomedocurso" name="nomedocurso" placeholder="Digite um Nome" [(ngModel)]="this.Curso.Nome">
+                </div>
+                <div class="pure-control-group">
+                    <label for="AlunosMatriculados">Alunos Matriculados:</label>
+                    <input type="text" id="AlunosMatriculados" name="AlunosMatriculados" 
+                    [(ngModel)]="this.Curso.AlunosMatriculados">
+                </div>
+                <div class="pure-control-group">
+                    <label for="CargaHoraria">Carga Horaria:</label>
+                    <input type="text" id="CargaHoraria" name="CargaHoraria"
+                    [(ngModel)]="this.Curso.CargaHoraria">
+                </div>
+                <div class="pure-controls">
+                    <button type="button" (click)="alterar()"
+                        class="pure-button pure-button-primary dinamico">Alterar</button>
+                    <button type="button" (click)="excluir()" class="pure-button dinamico">Excluir</button>
+                    <button type="button" routerLink="/cursos" class="pure-button">Voltar</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+<app-footer></app-footer>
